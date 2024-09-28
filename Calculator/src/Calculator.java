@@ -15,7 +15,7 @@ public class Calculator implements ActionListener {
     double num1 = 0, num2 = 0, result = 0;
     char operator;
 
-    Font myFont = new Font("Ink Free", Font.BOLD, 30);
+    Font myFont = new Font("Serif", Font.BOLD, 30);
 
     Calculator() {
         frame = new JFrame("Calculator");
@@ -105,11 +105,11 @@ public class Calculator implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         for (int i = 0; i < 10; i++) {
             if (e.getSource() == numberButttons[i]) {
-                textfield.setText(textfield.getText().concat(String.valueOf(i)));
+                textfield.setText(textfield.getText() + String.valueOf(i));
             }
         }
         if (e.getSource() == decButton) {
-            textfield.setText(textfield.getText().concat("."));
+            textfield.setText(textfield.getText() + ".");
         }
         if (e.getSource() == addButton) {
             num1 = Double.parseDouble(textfield.getText());
